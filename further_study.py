@@ -130,9 +130,10 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
-    del input_list[len(input_list)-1]
+    last_item = input_list[-1]
+    input_list[-1:] = []
 
-    return None
+    return last_item
 
 
 def custom_index(input_list, value):
@@ -238,8 +239,8 @@ def custom_equality(some_list, another_list):
     if custom_len(some_list) != custom_len(another_list):
         return False
     else:
-        for i in some_list:
-            if some_list[i] != another_list[i]
+        for i in range(custom_len(some_list)):
+            if some_list[i] != another_list[i]:
                 return False
     return True
 
