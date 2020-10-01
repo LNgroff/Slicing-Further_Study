@@ -147,30 +147,13 @@ def custom_index(input_list, value):
         1
 
     """
-    #index = 0
-    
-    # for i in range(len(input_list)):
-    #     if input_list[i] == value:
-    #         return 
-       
-    # return i
+
     index = 0
 
     for item in input_list:
         if item == value:
             return index
         index = index + 1
-
-'''
-  counter = 0
-
-    for i in input_list:
-        if i == value:
-            return counter
-
-        counter += 1
-'''
-
 
 
 def custom_count(input_list, value):
@@ -185,8 +168,13 @@ def custom_count(input_list, value):
         2
 
     """
+    count = 0
 
-    return 0
+    for i in input_list:
+        if i == value:
+            count = count + 1
+
+    return count
 
 
 def custom_reverse(input_list):
@@ -204,6 +192,8 @@ def custom_reverse(input_list):
         True
 
     """
+
+
 
     pass
 
@@ -224,8 +214,10 @@ def custom_contains(input_list, value):
         True
 
     """
-
-    return None
+    for i in input_list:
+        if i == value:
+            return True    
+    return False
 
 
 def custom_equality(some_list, another_list):
@@ -243,8 +235,13 @@ def custom_equality(some_list, another_list):
         False
 
     """
-
-    return None
+    if custom_len(some_list) != custom_len(another_list):
+        return False
+    else:
+        for i in some_list:
+            if some_list[i] != another_list[i]
+                return False
+    return True
 
 
 # This is the part were we actually run the doctests.
